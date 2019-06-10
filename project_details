@@ -1,4 +1,7 @@
 NTC Sensor and inverters integration test:
 
-
-in Automotive companies, the DCAC inverters have been produced as Gate board , Control Board and Power modules (IGBTs) in this project i ll build a Demo_Board to show the integration of the IGBTs sensor with the motor and how could the car safely stop once there is a high temperature. the project will be on different parts. the main programming language is embedded C on Arduino.
+in Automotive companies, the DCAC inverters have been produced as Gate board 
+, Control Board and Power modules (IGBTs) in this project i ll build a Demo_Board 
+to show the integration of the IGBTs sensor with the motor 
+and how could the car safely stop once there is a high temperature. the project will be on different parts.
+the main programming language is embedded C on Arduino.
