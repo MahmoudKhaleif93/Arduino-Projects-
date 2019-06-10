@@ -10,7 +10,7 @@
 #define NUMSAMPLES 5
 // The beta coefficient of the thermistor (usually 3000-4000)
 #define BCOEFFICIENT 3900
-// the value of the 'other' resistor
+// the value of the 'other' resistor the added one as a voltage devider 
 #define SERIESRESISTOR 10000
 
 int samples[NUMSAMPLES];
@@ -57,8 +57,9 @@ T /= BCOEFFICIENT;
 // 1/B * ln(R/Ro)
 T += 1.0 / (TEMPERATURENOMINAL + 273.15); // + (1/To)
 T = 1.0 / T;
-// Invert
+// Invert to c 
 T -= 273.15;
+  //condition if the temp get higher than a specific value 
 if (T >=27)
 {
   digitalWrite(LED,HIGH);
@@ -66,7 +67,7 @@ if (T >=27)
   digitalWrite(LED,LOW);
   delay(500);
 }
-// convert to C
+// showed test on the screen 
 Serial.print("Temperature ");
 Serial.print(T);
 Serial.println(" *C");
