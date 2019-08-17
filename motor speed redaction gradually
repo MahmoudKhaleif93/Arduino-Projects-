@@ -1,0 +1,75 @@
+//Motor Pins
+int EN_A = 11;      //Enable pin for first motor
+int IN1 = 9;       //control pin for first motor
+int IN2 = 8;       //control pin for first motor
+
+//Initializing variables to store data
+int motor_speed;
+
+void setup ()
+{
+  Serial.begin (9600); //Starting the serial communication at 9600 baud rate
+  //Initializing the motor pins as output
+  pinMode(EN_A, OUTPUT);
+  pinMode(IN1, OUTPUT);  
+  pinMode(IN2, OUTPUT);
+  
+}
+
+void loop (void) {
+  /// speed 100 start 
+  Serial.print("speed 100 start \n ");
+   motor_speed= 100; 
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    analogWrite(EN_A, motor_speed);
+    delay(8000);
+    Serial.print("speed 100 done \n ");
+    ///////
+   Serial.print("speed 80 start \n ");
+   motor_speed= 80; 
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    analogWrite(EN_A, motor_speed);
+    delay(8000);
+    Serial.print("speed 80 done \n ");
+    /////
+      Serial.print("speed 65 start \n ");
+    motor_speed= 65; 
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    analogWrite(EN_A, motor_speed);
+    delay(8000);
+    Serial.print("speed 65 done \n ");
+    ////
+    Serial.print("speed 60start \n ");
+    motor_speed= 60; 
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    analogWrite(EN_A, motor_speed);
+    delay(5000);
+    Serial.print("speed 60 done \n");
+    ///// STARTS 50
+    Serial.print("speed 55 start \n "); 
+    motor_speed= 55; 
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    analogWrite(EN_A, motor_speed);
+    delay(5000);
+     Serial.print("speed 55 done \n");
+    /////END 55 ///////////////////////////////
+    ////Start 50 ////////////
+    Serial.print("speed 50 start \n "); 
+    motor_speed= 50; 
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    analogWrite(EN_A, motor_speed);
+    delay(5000);
+     Serial.print("speed 50 done \n");
+
+    /////end 50 /////
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+    Serial.print("MOTOR Stop  \n ");
+    delay(60000);
+  }
